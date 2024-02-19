@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+._.idea
+._vite.config.js
+._node_modules
+._README.md
