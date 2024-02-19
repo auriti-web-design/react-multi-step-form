@@ -1,10 +1,31 @@
 import './Styles.css'
+import Personal from "./Personal.jsx";
+import Contact from "./Contact.jsx";
 import SignUp from "./SignUp.jsx";
 import {useState} from "react";
 
 const MainForm = () => {
 
     const [step, setStep] = useState(0);
+
+    const ShowStep = () => {
+        if(step === 0) {
+            return(
+                <SignUp />
+            );
+        }
+        else if(step === 1) {
+            return(
+                <Personal />
+            );
+        }
+
+        else if(step === 2) {
+            return (
+                <Contact />
+            );
+        }
+    }
 
     return (
         <>
@@ -14,7 +35,7 @@ const MainForm = () => {
                 </div>
                 <div className="container">
                     <div>
-                        <SignUp/>
+                        { ShowStep() }
                     </div>
                     <div className="btn-container">
                         <button className="btn" onClick={() => setStep(step -1)}>Prev</button>
