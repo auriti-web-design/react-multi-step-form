@@ -14,7 +14,8 @@ label {
 }
 
 input[type=text],
-input[type=password]{
+input[type=password],
+input[type=email]{
     font-size: 1rem;
     margin-top: 0.5rem;
     padding: 0.5rem;

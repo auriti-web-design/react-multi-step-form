@@ -38,8 +38,8 @@ const MainForm = () => {
                         { ShowStep() }
                     </div>
                     <div className="btn-container">
-                        <button className="btn" onClick={() => setStep(step -1)}>Prev</button>
-                        <button className="btn" onClick={() => setStep(step + 1)}>Next</button>
+                        <button className="btn" disabled={ step == 0} onClick={() => setStep(step -1)}>Prev</button>
+                        <button className="btn" disabled={ step == 2} onClick={() => setStep(step + 1)}>Next</button>
                     </div>
                 </div>
             </div>
