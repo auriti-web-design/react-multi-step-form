@@ -31,7 +31,12 @@ const MainForm = () => {
         <>
             <div>
                 <div className="progress-bar">
-                    <div className="progress"></div>
+                    <div
+                        className="progress"
+                        style={{ width: step === 0 ? "33.3%" : step == 1 ? "66.6%" : "100%" }}
+                    >
+
+                    </div>
                 </div>
                 <div className="container">
                     <div>
