@@ -97,30 +97,33 @@ const MainForm = () => {
                     <div>
                         { ShowStep() }
                     </div>
-                    <button className="btn-container">
-                        <button  className="btn"  disabled={ step == 0}  onClick={() => {
+                    <div className="btn-container">
+                        <button
+                            className="btn"
+                            disabled={ step == 0 }
+                            onClick={() => {
                                 if(step === 1) {
-                                    setPrevDis("hidden");
+                                    setPrevDis("hidden")
                                 }
                                 else {
-                                    setPrevDis("visible");
+                                    setPrevDis("visible")
                                 }
-                                setStep(step - 1);
+                                setStep(step - 1)
                                 setNextVal("Next");
                             }}
-                            style={{ visibility: prevDis}}
-                        >
-                            Prev
-                        </button>
-                        <button  className="btn" disabled={ step == 2 }
+                            style={{ visibility: prevDis }}
+                        >Prev</button>
+                        <button
+                            className="btn"
+                            disabled={ step == 2}
                             onClick={() => {
-                                if(valid) {
+                                if(valid){
                                     setStep(step + 1);
-                                    setValid(false)
+                                    setValid(false);
                                 }
-                            }}
-                        </button>
-                        </div>
+                            }
+                        }
+                        >Next</button>
                     </div>
                 </div>
             </div>
